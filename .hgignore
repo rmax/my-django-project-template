@@ -1,7 +1,23 @@
 syntax: glob
 *~
 *.pyc
+*.pyo
+*.orig
+*.bak
+*.tmp*
+*.tar.gz
+
+dev.db
+
 docs/_build/*
-uploads
+uploads/
 myproject/conf/local/*
 myproject.egg-info
+
+.DS_STORE
+.project
+.pydevproject
+.settings
+.svn
+.git
+
