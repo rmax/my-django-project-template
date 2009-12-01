@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block head_title %}{% endblock %}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="Copyright" content="©2009 myauthor" />
+    <meta name="Author" content="myauthor" />
+    <!-- javascripts -->
+    <script type="text/javascript" src="{% static_url "scripts/common.js" %}"></script>
+    <!-- styles -->
+    <link rel="stylesheet" media="screen, projection" type="text/css" href="{% static_url "styles/screen.css" %}" />
+    <link rel="stylesheet" media="print" type="text/css" href="{% static_url "styles/print.css" %}" />
+    <!--[if lt IE 8]><link rel="stylesheet" media="screen, projection" type="text/css" href="{% static_url "styles/ie.css" %}" /><![endif-->
+
+    <link rel="shortcut icon" href="{{ STATIC_URL }}images/favicon.ico" />
+    {% block head_extra %}{% endblock %}
+</head>
+<body id="{% block body_id %}{% endblock %}" class="{% block body_class %}{% endblock %}">
+<div id="container" class="container">
+    {% block header %}{% endblock %}
+    {% block body %}{% endblock %}
+    {% block footer %}{% endblock %}
+</div>
+</body>
+</html>
