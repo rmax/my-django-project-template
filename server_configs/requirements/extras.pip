@@ -1,0 +1,15 @@
+docutils
+MySQL-python>=1.2.2
+simplejson
+python-memcached>=1.44
+
+#PIL - Imaging
+-f http://effbot.org/media/downloads/Imaging-1.1.7.tar.gz
+
+# tests
+coverage==3.2b1
+-f http://bitbucket.org/cmheisel/nose/get/tip.tar.gz#egg=nose
+-e git+git://github.com/jbalogh/django-nose.git#egg=django-nose
+pylint
+pep8
+
