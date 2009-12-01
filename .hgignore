@@ -8,7 +8,11 @@ syntax: glob
 *.tar.gz
 
 dev.db
+fabfile_local.py
+settings_local.py
+pip-log.txt
 
+dists/*
 docs/_build/*
 uploads/
 myproject/conf/local/*
