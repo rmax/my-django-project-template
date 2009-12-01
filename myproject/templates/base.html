@@ -1,17 +1,36 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+{% extends "base_site.html" %}
 
-<html>
-<head>
-    <title>{% block head_title %}{% endblock %}</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-</head>
-<body>
+{% block header %}
+<div id="header">
+    <div class="logo">Site Logo</div>
+</div>
+{% endblock %}
 
-<div id="container">
-    {% block content %}
+{% block body %}
+
+<div id="main_content">
+    {% block main_content %}
+    <div id="main_title">
+        {% block title %}
+        {% endblock %}
+    </div>
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
     {% endblock %}
 </div>
 
-</body>
-</html>
+<div id="sidebar">
+    <h3>Sidebar</h3>
+    {% block sidebar %}
+    {% endblock %}
+</div>
+
+{% endblock %}
+
+{% block footer %}
+<div id="footer" class="clear">
+    Powered by <a href="http://www.djangoproject.com">Django</a>
+</div>
+{% endblock %}
