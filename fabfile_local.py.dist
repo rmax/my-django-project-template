@@ -1,0 +1,16 @@
+"""
+Use this file to add local defined environments.
+Usage: fab myhost <cmd>
+e.g. $ fab myhost prepare_debian 
+"""
+
+@init_env
+def myhost():
+    """Use myshot server
+    """
+    env.hosts = ['localhost']
+    #Edit the path to your projects path location
+    env.root = '/home/%(user)s/projects/%(project_name)s' % env
+
+
+
