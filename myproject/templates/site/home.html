@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block head_title %}{{ "Home Page"|escape }}{% endblock %}
+{% block title %}<h1>Home Page</h1>{% endblock %}
+
+{% load webdesign %}
+
+{% block content %}
+    {% lorem 3 p %}
+{% endblock %}
+
+{% block sidebar %}
+    {% lorem 1 p %}
+{% endblock %}
