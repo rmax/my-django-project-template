@@ -29,7 +29,8 @@ syntax:regexp
 #ignore virtualenv
 ^bin/*
 ^build/*
+^dist/*
 ^include/*
 ^lib/*
 ^src/*
-
+^bootstrap/*
