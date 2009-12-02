@@ -25,3 +25,11 @@ myproject.egg-info
 .svn
 .git
 
+syntax:regexp
+#ignore virtualenv
+^bin/*
+^build/*
+^include/*
+^lib/*
+^src/*
+
