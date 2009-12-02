@@ -228,6 +228,7 @@ def prepare_debian():
     # install virtual env & pip
     sudo('which pip || easy_install pip')
     sudo('which virtualenv || pip install virtualenv')
+    sudo('which paver || pip install paver')
 
 def prepare_local_py():
     require('hosts')
