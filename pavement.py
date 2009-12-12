@@ -9,7 +9,7 @@ options(
     bootstrap=Bunch(
         bootstrap_dir="bootstrap"
     ), virtualenv=Bunch(
-        packages_to_install=["pip", "yolk", "fabric"]
+        packages_to_install=["pip", "yolk"]
     )
 )
 
