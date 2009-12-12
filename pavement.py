@@ -8,9 +8,14 @@ from paver.easy import \
 options(
     bootstrap=Bunch(
         bootstrap_dir="bootstrap"
-    ), virtualenv=Bunch(
+    ),
+    virtualenv=Bunch(
         packages_to_install=["pip", "yolk"]
-    )
+    ),
+    install_requirements=Bunch(
+        bootstrap_dir="bootstrap",
+        pip_file="requirements.pip"
+    ),
 )
 
 @task
@@ -33,3 +38,18 @@ def bootstrap(options):
     call_task('paver.virtual.bootstrap')
     sh('cd %s; %s %s' % (bdir, sys.executable, bscript))
 
+@task
+def install_reqs(options):
+    """
+    Install requirements from pip file
+    """
+    bdir = options.bootstrap_dir
+    if os.path.exists(bdir):
+        pip_file = os.path.realpath(options.pip_file)
+        sh("""
+           cd %s && source bin/activate
+           && bin/pip install -r %s'
+           """ % (bdir, pip_file))
+    else:
+        #TODO: show error message
+        pass
